@@ -37,6 +37,9 @@
                                 <x-jet-nav-link href="/dashboard" :active="request()->routeIs('dashboard')">
                                     Dashboard
                                 </x-jet-nav-link>
+                                <x-jet-nav-link href="/analytics" :active="request()->routeIs('analytics')">
+                                    YouTube Analytics
+                                </x-jet-nav-link>
                             </div>
                         </div>
 
@@ -215,6 +218,8 @@
         </div>
 
         @stack('modals')
+
+        <script type="text/javascript" src="/js/app.js"></script>
 
         @livewireScripts
     </body>

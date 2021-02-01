@@ -1,6 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AnalyticsController;
+
+
+//AIzaSyB4uIzr2xKw_H1bOTUqVIRPsL-0RTl8Qb4
+
+
+//662368113590-90r7geklt04jn2tui66t6egk3dk0hjdt.apps.googleusercontent.com
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +28,5 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/analytics', [ AnalyticsController::class, 'analytics' ] )->name('analytics');
